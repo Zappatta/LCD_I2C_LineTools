@@ -27,11 +27,11 @@ void mqtt_callback(topic, payload, length) {
 }
 
 void loop() {
-    lcd.clear();
-    lcd.setCursor ( 0, 0 ); 
-    lcd.print(line0.next());
-    lcd.setCursor ( 0, 1 ); 
-    lcd.print(line1.next());
+	lcd.clear();
+	lcd.setCursor ( 0, 0 ); 
+	lcd.print(line0.next());
+	lcd.setCursor ( 0, 1 ); 
+	lcd.print(line1.next());
 }
 ```
 
