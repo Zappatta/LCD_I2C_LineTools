@@ -23,8 +23,9 @@ void LineScroller::setLine(byte* line, unsigned int length)
 }
 
 void LineScroller::setLine(String line) {
-  _pos =0;
-  _strLine = line;
+  Serial.println("line");
+  Serial.println(line);
+  _strLine += line;
 }
 
 void LineScroller::clear()
@@ -43,9 +44,9 @@ String LineScroller::next() {
     _pos = 0;
   }
 
+  String retVal = _strLine.substring(_pos, LINE_LENGTH + _pos);
   _pos ++;
-
-  return _strLine.substring(_pos, LINE_LENGTH + _pos);
+  return retVal;
 }
 
 
